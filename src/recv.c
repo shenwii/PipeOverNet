@@ -3,6 +3,10 @@
 #include <stdio.h>
 #include <unistd.h>
 
+#if defined _WIN32 || defined __CYGWIN__
+#define MSG_NOSIGNAL 0
+#endif
+
 #define BUFFER_SIZE 4096
 
 int pon_recv(struct sockaddr *addr) {

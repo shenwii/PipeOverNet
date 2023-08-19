@@ -2,11 +2,11 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdint.h>
-#include <netinet/in.h>
 #if defined _WIN32 || defined __CYGWIN__
 #include <winsock2.h>
 #include <ws2tcpip.h>
 #else
+#include <netinet/in.h>
 #include <arpa/inet.h>
 #include <netdb.h>
 #endif
